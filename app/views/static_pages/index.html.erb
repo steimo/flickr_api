@@ -1,0 +1,17 @@
+<% if flash.any? %>
+  <% flash.each do |type, msg| %>
+    <%= msg %>
+  <% end %>
+<% end %>
+<div class="search-form">
+  <%= form_tag root_path, :method => "get" do %>
+    <%= label_tag(:id, "Enter user id:") %>
+    <%= text_field_tag :id, params[:id],  placeholder: "id" %>
+    <%= submit_tag("Search", :id => nil) %>
+  <% end %>
+</div>
+<div class="photo-grid">
+  <% @photos.each do |photo| %>
+    <img src="<%= Flickr.url_n(photo) %>">
+  <% end %>
+</div>
