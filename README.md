@@ -1,24 +1,11 @@
-# README
+### Overview:
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a simple photo widget that allows to display photos from Flickr feed by entering the user id. App fetches photos from Flickr by interacting with the Flickr API. For example, submitting someone else's ID in the form triggers `flickr.photos.search` method which returns a list of photos matching some criteria.
 
-Things you may want to cover:
+### Gems used:
 
-* Ruby version
 
-* System dependencies
+- [Flickr](https://github.com/cyclotron3k/flickr) - a library to access the Flickr API.
 
-* Configuration
+- [Figaro](https://github.com/laserlemon/figaro) - to store the key in an environment variable.
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
